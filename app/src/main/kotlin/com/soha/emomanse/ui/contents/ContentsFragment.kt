@@ -30,9 +30,8 @@ class ContentsFragment : Fragment() {
         _binding = FragmentContentsBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        val textView: TextView = binding.textHome
         contentsViewModel.text.observe(viewLifecycleOwner, Observer {
-            textView.text = it
+
         })
         return root
     }
